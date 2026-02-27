@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -86,7 +85,7 @@ const Nav = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden bg-white text-black p-6 side-menu">
+        <div className="lg:hidden bg-white text-black p-6 slide-menu">
           <ul className=" space-y-4 menu">
             {navLinks.map((link) => (
               <li key={link.name}>

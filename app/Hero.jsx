@@ -107,8 +107,41 @@ const tabContent = {
   ],
 };
 
+//Desing Process
+const ProcessSteps = [
+  {
+    id: 1,
+    imgSrc: "/process-icon-1.svg",
+    title: "Initial Consultation",
+    description:
+      "We begin with a detailed discussion to understand your objectives, spatial requirements, budget parameters, and project timeline.",
+  },
+  {
+    id: 2,
+    imgSrc: "/process-icon-2.svg",
+    title: "Concept Development",
+    description:
+      "Our team translates your vision into preliminary concepts, including layout strategies, design direction, and functional planning.",
+  },
+  {
+    id: 3,
+    imgSrc: "/process-icon-3.svg",
+    title: "Design & Planning",
+    description:
+      "We refine the approved concept into technical drawings, material selections, and comprehensive architectural plans ready for execution.",
+  },
+  {
+    id: 4,
+    imgSrc: "/process-icon-4.svg",
+    title: "Execution & Delivery",
+    description:
+      "From project coordination to final handover, we oversee implementation to ensure quality, precision, and alignment with the original vision.",
+  },
+];
+
+
 const Hero = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("his");
   return (
     <>
       {/* Hero */}
@@ -282,15 +315,29 @@ const Hero = () => {
                             ? " text-black after:h-1 after:absolute after:bottom-0 after:left-0 after:w-full after:bg-black"
                             : "text-gray-400 hover:text-black"
                         }`}
-                  onClick={()=> setActiveTab(tab.key)}
+                  onClick={() => setActiveTab(tab.key)}
                 >
                   {tab.label}
                 </button>
               ))}
             </div>
+
+            {/* Content */}
+            <div className="space-y-4 text-gray-700">
+              {tabContent[activeTab].map((para, idx) => (
+                <p key={idx} className="text-base leading-relaxed">
+                  {para}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Desing Process */}
+      <div>
+        
+      </div>
     </>
   );
 };

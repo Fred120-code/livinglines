@@ -151,13 +151,13 @@ body {
   }
 
   .swiper-next {
-    left: 90% !important;
+    left: 85% !important;
   }
 
   .slide-menu {
     position: absolute !important;
     top: 100%;
-    left: 0;
+    left: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;

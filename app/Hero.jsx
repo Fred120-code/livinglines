@@ -139,6 +139,46 @@ const ProcessSteps = [
   },
 ];
 
+//Services
+const Services = [
+  {
+    icon: "/service-icon-1.svg",
+    title: "Furniture Selection",
+    description:
+      "Carefully selecting furniture pieces that balance comfort, functionality, and aesthetic harmony.",
+  },
+  {
+    icon: "/service-icon-2.svg",
+    title: "Interior Design",
+    description:
+      "Creating cohesive interior concepts that reflect your personality and enhance spatial flow.",
+  },
+  {
+    icon: "/service-icon-3.svg",
+    title: "Space Planning",
+    description:
+      "Optimizing layouts to improve movement, efficiency, and overall usability of each space.",
+  },
+  {
+    icon: "/service-icon-4.svg",
+    title: "Lighting Design",
+    description:
+      "Designing layered lighting solutions to elevate ambiance, mood, and architectural features.",
+  },
+  {
+    icon: "/service-icon-5.svg",
+    title: "3D Visualization",
+    description:
+      "Providing realistic 3D renders to help you visualize the final outcome before execution.",
+  },
+  {
+    icon: "/service-icon-6.svg",
+    title: "Renovation & Remodeling",
+    description:
+      "Transforming existing spaces with modern upgrades while preserving structural integrity.",
+  },
+];
+
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("his");
   return (
@@ -238,7 +278,7 @@ const Hero = () => {
           <div className="lg:w-2/3">
             <h2
               className="text-[4rem] leading-[4rem] lg:text-[6rem] lg:leading-[6rem]
-              tracking-[0.2rem] font-[bricolage] font-bold"
+              tracking-[0.2rem] font-bricolage font-bold"
             >
               Interior & Architecture Desing Solutions
             </h2>
@@ -343,10 +383,10 @@ const Hero = () => {
               </h1>
             </div>
 
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/2">
               <h3
                 className=" uppercase tracking-wider font-semibold border-b 
-            pb-2 mb-6 text-sm w-fit"
+                              pb-2 mb-6 text-sm w-fit"
               >
                 Process
               </h3>
@@ -398,6 +438,63 @@ const Hero = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Services */}
+      <div className="px-[8%] lg:px-[12%] py-12">
+        <div className=" flex flex-col lg:flex-row justify-between items-start mb-12">
+          <div className="lg:w-2/3 ">
+            <h1 className="text-8xl font-bricolage font-bold">
+              Interior Desing Solutions
+            </h1>
+          </div>
+          <div className="w-1/2">
+            <h3 className=" text-2xl font-jost font-semibold mb-3">
+              Our Services
+            </h3>
+            <p className="mb-4 text-gray-700">
+              whether you're dreaming of a cozy home retreat or a bold modern
+              workspace, our expert designers bring your vision to life.
+            </p>
+            <a href="/Services">
+              <button
+                className="flex items-center
+            text-black font-semibold hover:underline text-lg py-3 px-0"
+              >
+                <span> All Services</span>
+                <i className="bi bi-arrow-up-right ml-2 text-xs"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+          {Services.map((service, index) => (
+            <div
+              className=" border border-black rounded-xl p-6 transition-all duration-300
+                   hover:border-transparent shadow hover:shadow-lg hover:-translate-y-1 cursor-pointer group"
+              key={index}
+            >
+              <Image
+                src={service.icon}
+                alt={service.title}
+                width={70}
+                height={70}
+                className=" mb-4 transition-transform duration-700 group-hover:rotate-[360deg]"
+              />
+              <h2 className="text-3xl font-bricolage relative inline-block mt-2 mb-2 
+              after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px]
+               after:w-0 after:bg-black hover:after:w-full after:transition-all after:duration-300">
+                {service.title}
+              </h2>
+              <p className="text-gray-700 font-normal w-4/5">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        
       </div>
     </>
   );

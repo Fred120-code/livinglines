@@ -91,7 +91,7 @@ const Nav = () => {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className={`block px-4 py-2 text-base font-medium transition-all hover:bg-gray-200 hover:text-black
+                  className={`block px-4 py-2 text-base font-medium transition-all hover:text-black
                              ${pathname === link.href ? "text-black bg-gray-200 active-link" : "text-black"}
                             `}
                   onClick={() => setIsMenuOpen(false)}

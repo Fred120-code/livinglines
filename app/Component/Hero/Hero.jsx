@@ -1,5 +1,12 @@
 "use client";
 
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, EffectCards } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-cards";
+
 //Hero
 import HeroSlides from "../../JsonData/heroSlides";
 

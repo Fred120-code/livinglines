@@ -6,8 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 import Image from "next/image";
-import PropertyData from "../../JsonData/properties";
-
+import PropertyData from "../../JsonData/properties.js";
 
 const Properties = () => {
   return (
@@ -60,7 +59,7 @@ const Properties = () => {
         >
           {PropertyData.map((property, index) => (
             <SwiperSlide key={index}>
-              <Link href={`properties/${property.id}`}>
+              <Link href={`/properties/${property.id}`}>
                 <div className=" relative h-[450px] rounded overflow-hidden group">
                   <Image
                     src={property.image}

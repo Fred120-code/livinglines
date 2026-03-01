@@ -179,6 +179,95 @@ const Services = [
   },
 ];
 
+//Property
+
+const PropertyData = [
+  {
+    id: 1,
+    image: "/property-1.jpg",
+    title: "Modern Family Home",
+    desc: "Contemporary home with stylish design and functional living spaces.",
+    price: "85,000",
+  },
+  {
+    id: 2,
+    image: "/property-2.jpg",
+    title: "Spacious Luxury Residence",
+    desc: "Expansive residence featuring elegant finishes and abundant natural lighting.",
+    price: "92,000",
+  },
+  {
+    id: 3,
+    image: "/property-3.jpg",
+    title: "Urban Contemporary Villa",
+    desc: "Modern villa designed for comfort, privacy, and architectural excellence.",
+    price: "110,000",
+  },
+  {
+    id: 4,
+    image: "/property-4.jpg",
+    title: "Elegant Suburban House",
+    desc: "Refined suburban property with open-plan interiors and premium materials.",
+    price: "78,500",
+  },
+  {
+    id: 5,
+    image: "/property-5.jpg",
+    title: "Minimalist Smart Home",
+    desc: "Sleek smart home integrating technology with minimalist aesthetics.",
+    price: "125,000",
+  },
+  {
+    id: 6,
+    image: "/property-6.jpg",
+    title: "Classic Brick Mansion",
+    desc: "Timeless brick mansion combining traditional charm with modern upgrades.",
+    price: "140,000",
+  },
+  {
+    id: 7,
+    image: "/property-7.jpg",
+    title: "Luxury Penthouse Suite",
+    desc: "High-end penthouse offering panoramic views and premium interior finishes.",
+    price: "160,000",
+  },
+  {
+    id: 8,
+    image: "/property-8.jpg",
+    title: "Cozy Modern Cottage",
+    desc: "Warm and inviting cottage with contemporary detailing and natural textures.",
+    price: "69,000",
+  },
+  {
+    id: 9,
+    image: "/property-9.jpg",
+    title: "Waterfront Executive Home",
+    desc: "Exclusive waterfront property designed for luxury and serenity.",
+    price: "185,000",
+  },
+  {
+    id: 10,
+    image: "/property-10.jpg",
+    title: "Contemporary Glass Villa",
+    desc: "Architectural masterpiece featuring glass facades and open living concepts.",
+    price: "210,000",
+  },
+  {
+    id: 11,
+    image: "/property-11.jpg",
+    title: "Family Comfort Estate",
+    desc: "Spacious estate tailored for family living with landscaped surroundings.",
+    price: "97,000",
+  },
+  {
+    id: 12,
+    image: "/property-12.jpg",
+    title: "Premium Urban Apartment",
+    desc: "Modern city apartment designed for professionals seeking comfort and style.",
+    price: "73,500",
+  },
+];
+
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("his");
   return (
@@ -482,9 +571,11 @@ const Hero = () => {
                 height={70}
                 className=" mb-4 transition-transform duration-700 group-hover:rotate-[360deg]"
               />
-              <h2 className="text-3xl font-bricolage relative inline-block mt-2 mb-2 
+              <h2
+                className="text-3xl font-bricolage relative inline-block mt-2 mb-2 
               after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px]
-               after:w-0 after:bg-black hover:after:w-full after:transition-all after:duration-300">
+               after:w-0 after:bg-black hover:after:w-full after:transition-all after:duration-300"
+              >
                 {service.title}
               </h2>
               <p className="text-gray-700 font-normal w-4/5">
@@ -493,9 +584,106 @@ const Hero = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
+
+      {/* Properties */}
+      <section className="px-[8%] lg:px-[12%] py-16 relative">
+        <div className=" flex flex-col lg:flex-row justify-between items-start mb-12">
+          <div className="lg:w-2/3 mb-8 lg:mb-0">
+            <h1 className="text-8xl font-bricolage font-bold">
+              Our Properties
+            </h1>
+          </div>
+          <div className="w-1/2">
+            <h3 className=" text-2xl font-jost font-semibold mb-3">
+              Our Properties
+            </h3>
+            <p className="mb-4 text-gray-700">
+              We build our projectss with your dreams and ideas. Touch modern
+              concepts and designs with Shree Hari Associates.Our Properties
+            </p>
+            <a href="/Projects">
+              <button
+                className="flex items-center
+            text-black font-semibold hover:underline text-lg py-3 px-0"
+              >
+                <span>View More</span>
+                <i className="bi bi-arrow-up-right ml-2 text-xs"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <Swiper
+          loop={true}
+          modules={[Navigation, Autoplay]}
+          navigation={{
+            nextEl: ".swiper-project-next",
+            prevEl: ".swiper-project-prev",
+          }}
+          autoplay={{
+            delay: 1500,
+          }}
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="relative"
+        >
+          {PropertyData.map((property, index) => (
+            <SwiperSlide key={index}>
+              <Link href={`properties/${property.id}`}>
+                <div className=" relative h-[450px] rounded overflow-hidden group">
+                  <Image
+                    src={property.image}
+                    alt={property.title}
+                    fill
+                    className=" object-cover transition-transform duration-700
+                     group-hover:scale-110"
+                  />
+
+                  {/* Overlay Gradient */}
+                  <div
+                    className=" absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-black 
+                  to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"
+                  />
+
+                  {/* Title & Price */}
+                  <div
+                    className=" flex justify-between items-center w-full absolute bottom-0
+                   left-0 z-10 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform
+                    duration-700"
+                  >
+                    <h4 className=" text-white text-2xl font-bricolage font-bold">
+                      {property.title}
+                    </h4>
+                    <p className="text-white text-xl font-bricolage">
+                      ${property.price}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Swiper Navigation Buttons
+        <div
+          className=" swiper-project-prev hidden lg:block absolute right-
+         top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-black text-2xl"
+        >
+          <i className="bi bi-arrow-right"></i>
+        </div>
+        <div
+          className=" swiper-project-next hidden lg:block absolute right-
+         top-1/4 transform -translate-y-1/2 cursor-pointer z-10 text-black text-2xl"
+        >
+          <i className="bi bi-arrow-left"></i>
+        </div> */}
+      </section>
     </>
   );
 };

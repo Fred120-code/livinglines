@@ -1,10 +1,10 @@
-import React from "react";
+"use client";
 import { notFound } from "next/navigation";
 import PropertyData from "../../JsonData/properties";
 import Image from "next/image";
 import Link from "next/link";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Navigation, EffectCards } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
@@ -132,14 +132,110 @@ export default async function PropertyDetails({ params }) {
         <h1 className="text-3xl md:text-4xl font-bold mb-10">Amenities</h1>
 
         {/* Amenities Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-        gap-8 text-gray-700">
-            <div className="flex items-center gap-3">
-                <i className="bi bi-lightning-charge text-yellow-600
-                text-2xl"></i>
-                <span>Power Back Up</span>
-            </div>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5
+                    gap-8 text-gray-700"
+        >
+          <div className="flex items-center gap-3">
+            <i
+              className="bi bi-lightning-charge text-yellow-600
+                text-2xl"
+            ></i>
+            <span>Power Back Up</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <i
+              className="bi bi-wifi text-yellow-600
+                text-2xl"
+            ></i>
+            <span>Internet/Wifi Connectivity</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <i
+              className="bi bi-tools text-yellow-600
+                text-2xl"
+            ></i>
+            <span>Maintenance Staff</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <i
+              className="bi bi-building text-yellow-600
+                text-2xl"
+            ></i>
+            <span>Vaastu Compliant</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <i
+              className="bi bi-houses text-yellow-600
+                text-2xl"
+            ></i>
+            <span>Rentable Community Space</span>
+          </div>
         </div>
+      </div>
+
+      <div className="px-[8%] lg:px-[12%] py-16 bg-gray-50">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">
+          Related Properties
+        </h2>
+
+        <Swiper
+          loop={true}
+          modules={[Navigation, Autoplay]}
+          navigation={{
+            nextEl: ".swiper-project-next",
+            prevEl: ".swiper-project-prev",
+          }}
+          autoplay={{
+            delay: 1500,
+          }}
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="relative"
+        >
+          {relatedProperties.map((property, index) => (
+            <SwiperSlide key={index}>
+              <Link href={`/properties/${property.id}`}>
+                <div className=" relative h-[450px] rounded overflow-hidden group">
+                  <Image
+                    src={property.image}
+                    alt={property.title}
+                    fill
+                    className=" object-cover transition-transform duration-700
+                                 group-hover:scale-110"
+                  />
+
+                  {/* Overlay Gradient */}
+                  <div
+                    className=" absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-black 
+                              to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"
+                  />
+
+                  {/* Title & Price */}
+                  <div
+                    className=" flex justify-between items-center w-full absolute bottom-0
+                               left-0 z-10 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform
+                                duration-700"
+                  >
+                    <h4 className=" text-white text-2xl font-bricolage font-bold">
+                      {property.title}
+                    </h4>
+                    <p className="text-white text-xl font-bricolage">
+                      ${property.price}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        
       </div>
     </>
   );

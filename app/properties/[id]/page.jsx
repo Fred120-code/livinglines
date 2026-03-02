@@ -1,9 +1,6 @@
 import { notFound } from "next/navigation";
 import PropertyData from "../../JsonData/properties";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-cards";
 import SwiperComp from "../../Component/Swiper/SwiperComp";
 
 export default async function PropertyDetails({ params }) {
@@ -19,8 +16,8 @@ export default async function PropertyDetails({ params }) {
   return (
     <>
       <div
-        className="relative h-[68vh] overflow-hidden flex items-center
-         justify-center"
+        className="relative md:h-[68vh] h-[280px] overflow-hidden flex items-center
+         justify-center text-center"
       >
         <video
           autoPlay

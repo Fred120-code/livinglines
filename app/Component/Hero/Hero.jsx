@@ -18,6 +18,7 @@ import Properties from "../Properties/Properties";
 import Marquee2 from "../Marquee2/Marquee2";
 import Service2 from "../Service2/Service2";
 import Gallery from "../Gallery/Gallery";
+import VideoBanner from "../VideoBanner/VideoBanner";
 
 const Hero = () => {
   return (
@@ -118,6 +119,9 @@ const Hero = () => {
 
       {/* Gallery */}
       <Gallery />
+
+      {/* VideoBanner */}
+      <VideoBanner />
     </>
   );
 };

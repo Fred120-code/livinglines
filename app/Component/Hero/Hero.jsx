@@ -16,6 +16,7 @@ import DesingProcess from "../DesingProcess/DesingProcess";
 import Service from "../Service/Service"
 import Properties from "../Properties/Properties";
 import Marquee2 from "../Marquee2/Marquee2";
+import Service2 from "../Service2/Service2";
 
 const Hero = () => {
   return (
@@ -112,6 +113,9 @@ const Hero = () => {
 
       {/* Marquee 2 */}
       <Marquee2/>
+
+      {/* Service2 */}
+      <Service2/>
     </>
   );
 };

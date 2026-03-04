@@ -13,10 +13,11 @@ import HeroSlides from "../../JsonData/heroSlides";
 import Marquee from "../Marquee/Marquee";
 import About from "../About/About";
 import DesingProcess from "../DesingProcess/DesingProcess";
-import Service from "../Service/Service"
+import Service from "../Service/Service";
 import Properties from "../Properties/Properties";
 import Marquee2 from "../Marquee2/Marquee2";
 import Service2 from "../Service2/Service2";
+import Gallery from "../Gallery/Gallery";
 
 const Hero = () => {
   return (
@@ -95,27 +96,28 @@ const Hero = () => {
       </div>
 
       {/* Marquee */}
-      <Marquee/>
+      <Marquee />
 
       {/* About */}
-      <About/>
-
+      <About />
 
       {/* DesingProcess */}
-      <DesingProcess/>
+      <DesingProcess />
 
       {/* Services */}
-      <Service/>
-      
+      <Service />
 
       {/* Properties */}
-      <Properties/>
+      <Properties />
 
       {/* Marquee 2 */}
-      <Marquee2/>
+      <Marquee2 />
 
       {/* Service2 */}
-      <Service2/>
+      <Service2 />
+
+      {/* Gallery */}
+      <Gallery />
     </>
   );
 };

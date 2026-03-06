@@ -24,7 +24,9 @@ const VideoBanner = () => {
         <button
           className="mt-10 px-6 py-3 cursor-pointer bg-white text-black 
          font-semibold rounded hover:bg-gray-200 transition hover:-translate-y-1"
-        >Contact Us</button>
+        >
+          Contact Us
+        </button>
       </div>
     </div>
   );

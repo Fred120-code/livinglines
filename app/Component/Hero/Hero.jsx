@@ -19,6 +19,7 @@ import Marquee2 from "../Marquee2/Marquee2";
 import Service2 from "../Service2/Service2";
 import Gallery from "../Gallery/Gallery";
 import VideoBanner from "../VideoBanner/VideoBanner";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Hero = () => {
   return (
@@ -122,6 +123,9 @@ const Hero = () => {
 
       {/* VideoBanner */}
       <VideoBanner />
+
+      {/* Testimonial */}
+      <Testimonial />
     </>
   );
 };

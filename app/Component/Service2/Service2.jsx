@@ -31,35 +31,7 @@ const Service2 = () => {
         </div>
       </div>
 
-      {/* {
-        service2.map((service, idx) => (
-          <div key={idx} className="flex flex-col lg:flex-row gap-8 mb-12">
-            <div className="lg:w-1/2">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-            <div className="lg:w-1/2 flex flex-col justify-center">
-              <h2 className="text-4xl font-bricolage font-bold mb-4">
-                {service.title}
-              </h2>
-              <p className="text-gray-700 mb-6">{service.description}</p>
-              <a href="/Services">
-                <button
-                  className="flex items-center
-                    text-black font-semibold hover:underline text-lg py-3 px-0"
-                >
-                  <span> Learn More</span>
-                  <i className="bi bi-arrow-up-right ml-2 text-xs"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-        ))
-      } */}
-
+     
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
         {service2.map((service, idx) => (
           <div

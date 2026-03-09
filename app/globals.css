@@ -193,3 +193,13 @@ body {
   display: flex;
   width: fit-content;
 }
+
+/* Footer Css */
+
+.footer {
+  background-image: url("/footer-bg.png");
+}
+
+.footer-shape {
+  background-image: url("/footer-shape.svg");
+}

@@ -20,6 +20,8 @@ import Service2 from "../Service2/Service2";
 import Gallery from "../Gallery/Gallery";
 import VideoBanner from "../VideoBanner/VideoBanner";
 import Testimonial from "../Testimonial/Testimonial";
+import SocialIage from "../SocialImage/SocialImage";
+import SocialImage from "../SocialImage/SocialImage";
 
 const Hero = () => {
   return (
@@ -126,6 +128,9 @@ const Hero = () => {
 
       {/* Testimonial */}
       <Testimonial />
+
+      {/* SocialImage */}
+      <SocialImage />
     </>
   );
 };

@@ -13,7 +13,7 @@ export const testimonialData = [
     position: "Marketing Manager, Company B",
     testimonial:
       "The team at Living Lines exceeded our expectations. They delivered our project on time and within budget, while maintaining excellent communication throughout the process.",
-    image: "/assets/testimonial2.jpg",
+    image: "/User.jpg",
   },
   {
     name: "Michael Johnson",
@@ -21,7 +21,7 @@ export const testimonialData = [
     position: "Founder, Startup C",
     testimonial:
       "Living Lines provided innovative design solutions that perfectly matched our brand identity. We couldn't be happier with the results!",
-    image: "/assets/testimonial3.jpg",
+    image: "/User.jpg",
   },
   {
     name: "Michael Johnson",
@@ -29,7 +29,7 @@ export const testimonialData = [
     position: "Founder, Startup C",
     testimonial:
       "Living Lines provided innovative design solutions that perfectly matched our brand identity. We couldn't be happier with the results!",
-    image: "/assets/testimonial3.jpg",
+    image: "/User.jpg",
   },
   {
     name: "Michael Johnson",
@@ -37,6 +37,6 @@ export const testimonialData = [
     position: "Founder, Startup C",
     testimonial:
       "Living Lines provided innovative design solutions that perfectly matched our brand identity. We couldn't be happier with the results!",
-    image: "/assets/testimonial3.jpg",
+    image: "/User.jpg",
   },
 ];  

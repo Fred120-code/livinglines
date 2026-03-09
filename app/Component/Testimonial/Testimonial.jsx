@@ -30,25 +30,39 @@ const Testimonial = () => {
         </div>
       </div>
 
-        <Swiper
-            spaceBetween={30}
-            slidesPerView={3}
-            loop={true}
-            className="w-full"
-        >
-            {testimonialData.map((testimonial, index) => (
-                <SwiperSlide key={index}>
-                    <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
-                        <img 
-                            src="/qoute.svg" 
-                            alt="" 
-                            className="w-10 h-10 object-contain mb-4
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        loop={true}
+        className="w-full"
+      >
+        {testimonialData.map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
+              <img
+                src="/qoute.svg"
+                alt="qoute"
+                className="w-10 h-10 object-contain mb-4
                              opacity-25"
-                        />
-                    </div>
-                </SwiperSlide>
-            ))}
-        </Swiper>
+              />
+              <p className="text-gray-700 mb-6">{testimonial.testimonial}</p>
+              <div className="flex items-center">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+                <div className="ml-4">
+                  <h2 className="font-semibold text-lg">{testimonial.name}</h2>
+                  <p className="text-sm text-gray-500">
+                    {testimonial.location}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

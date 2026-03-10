@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const SocialImage = () => {
   return (
-    <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px] xl:h-[500px]">
+    <div className="w-full h-56 sm:h-64 md:h-80 lg:h-96 xl:h-[500px]">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -16,6 +16,7 @@ const SocialImage = () => {
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
+          320: { slidesPerView: 1 },
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 2 },

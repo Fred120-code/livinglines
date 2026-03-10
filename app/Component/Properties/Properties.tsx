@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
@@ -10,26 +11,23 @@ import PropertyData from "../../JsonData/properties.js";
 const Properties = () => {
   return (
     <>
-      <section className="px-[8%] lg:px-[12%] py-16 relative">
-        <div className=" flex flex-col lg:flex-row justify-between items-start mb-12">
-          <div className="lg:w-2/3 mb-8 lg:mb-0">
-            <h1 className="text-8xl font-bricolage font-bold">
+      <section className="px-4 sm:px-[8%] lg:px-[12%] py-8 sm:py-12 md:py-16 lg:py-20 relative">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 sm:gap-8 md:gap-12 mb-8 sm:mb-12 md:mb-16">
+          <div className="lg:w-2/3 w-full">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bricolage font-bold leading-tight">
               Our Properties
             </h1>
           </div>
-          <div className="w-1/2">
-            <h3 className=" text-2xl font-jost font-semibold mb-3">
+          <div className="w-full lg:w-1/3">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-jost font-semibold mb-2 sm:mb-3">
               Our Properties
             </h3>
-            <p className="mb-4 text-gray-700">
+            <p className="mb-3 sm:mb-4 text-gray-700 text-sm sm:text-base leading-relaxed">
               We build our projectss with your dreams and ideas. Touch modern
               concepts and designs with Shree Hari Associates.Our Properties
             </p>
             <a href="/Projects">
-              <button
-                className="flex items-center
-                text-black font-semibold hover:underline text-lg py-3 px-0"
-              >
+              <button className="flex items-center text-black font-semibold hover:underline text-sm sm:text-base md:text-lg py-2 sm:py-3 px-0 transition-all">
                 <span>View More</span>
                 <i className="bi bi-arrow-up-right ml-2 text-xs"></i>
               </button>
@@ -47,43 +45,37 @@ const Properties = () => {
           autoplay={{
             delay: 1500,
           }}
-          spaceBetween={24}
+          spaceBetween={12}
           slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            320: { slidesPerView: 1, spaceBetween: 12 },
+            640: { slidesPerView: 1, spaceBetween: 16 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 },
+            1280: { slidesPerView: 3, spaceBetween: 28 },
           }}
           className="relative"
         >
           {PropertyData.map((property, index) => (
             <SwiperSlide key={index}>
               <Link href={`/properties/${property.id}`}>
-                <div className=" relative h-[450px] rounded overflow-hidden group">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded overflow-hidden group shadow-md">
                   <Image
                     src={property.image}
                     alt={property.title}
                     fill
-                    className=" object-cover transition-transform duration-700
-                         group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
                   {/* Overlay Gradient */}
-                  <div
-                    className=" absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-black 
-                      to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"
-                  />
+                  <div className="absolute inset-x-0 bottom-0 h-[25%] sm:h-[30%] bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0" />
 
                   {/* Title & Price */}
-                  <div
-                    className=" flex justify-between items-center w-full absolute bottom-0
-                       left-0 z-10 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform
-                        duration-700"
-                  >
-                    <h4 className=" text-white text-2xl font-bricolage font-bold">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 w-full absolute bottom-0 left-0 z-10 px-2 sm:px-3 md:px-4 py-2 sm:py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-700">
+                    <h4 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bricolage font-bold line-clamp-2">
                       {property.title}
                     </h4>
-                    <p className="text-white text-xl font-bricolage">
+                    <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-bricolage whitespace-nowrap">
                       ${property.price}
                     </p>
                   </div>
@@ -92,20 +84,6 @@ const Properties = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Swiper Navigation Buttons
-            <div
-              className=" swiper-project-prev hidden lg:block absolute right-
-             top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-black text-2xl"
-            >
-              <i className="bi bi-arrow-right"></i>
-            </div>
-            <div
-              className=" swiper-project-next hidden lg:block absolute right-
-             top-1/4 transform -translate-y-1/2 cursor-pointer z-10 text-black text-2xl"
-            >
-              <i className="bi bi-arrow-left"></i>
-            </div> */}
       </section>
     </>
   );

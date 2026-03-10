@@ -36,7 +36,10 @@ const Testimonial = () => {
         spaceBetween={16}
         slidesPerView={1}
         loop={true}
+        autoplay={{ delay: 3000 }}
+        modules={[Autoplay]}
         breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 16 },
           640: { slidesPerView: 1, spaceBetween: 20 },
           768: { slidesPerView: 2, spaceBetween: 24 },
           1024: { slidesPerView: 3, spaceBetween: 30 },

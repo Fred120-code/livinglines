@@ -14,7 +14,7 @@ export default async function PropertyDetails({ params }) {
 
  
   return (
-    <>
+    <div>
       <div
         className="relative md:h-[68vh] h-[280px] overflow-hidden flex items-center
          justify-center text-center"
@@ -176,6 +176,6 @@ export default async function PropertyDetails({ params }) {
 
         <SwiperComp relatedProperties={relatedProperties} />
       </div>
-    </>
+    </div>
   );
 }

@@ -8,7 +8,8 @@ const Page = () => {
     <div>
       {" "}
       <div
-        className="relative md:h-[68vh] h-[280px] overflow-hidden flex items-center
+        className="relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] 
+        xl:h-[68vh] overflow-hidden flex flex-col items-center
          justify-center text-center"
       >
         <video
@@ -16,20 +17,22 @@ const Page = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src="/page-title.mp4" type="video/mp4" />
         </video>
-        
+
         <div
           className="absolute top-0 left-0 w-full h-full bg-black/70
             z-10"
         />
-        <h1 className="text-white text-[3rem] md:text-[5rem] font-bricolage z-20">
+        <h1
+          className="text-white text-2xl sm:text-3xl md:text-4xl 
+        lg:text-5xl xl:text-6xl font-bricolage z-20 leading-tight px-4"
+        >
           About Us
         </h1>
       </div>
-      
       {/* About Us */}
       <div className="bg-white py-10">
         {/* Top Section */}
@@ -125,10 +128,15 @@ const Page = () => {
           </div>
         </div>
       </div>
-      {/* Design Process */}
-      <DesingProcess />
-      {/* Gallery */}
-      <Gallery />
+      <div
+        className=" mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-8 
+      sm:mb-10 md:mb-12 lg:mb-16"
+      >
+        {/* Design Process */}
+        <DesingProcess />
+        {/* Gallery */}
+        <Gallery />
+      </div>
     </div>
   );
 };

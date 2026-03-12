@@ -4,8 +4,7 @@ import Image from "next/image";
 
 const Service = () => {
   return (
-    <>
-      {" "}
+    <div>
       <div className="px-4 sm:px-6 md:px-8 lg:px-[12%] py-8 sm:py-12 md:py-16">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div className="lg:w-2/3 w-full">
@@ -61,7 +60,7 @@ const Service = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

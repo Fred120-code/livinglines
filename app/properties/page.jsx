@@ -2,7 +2,7 @@ import Properties from "../Component/Properties/Properties";
 
 const page = () => {
   return (
-    <>
+    <section>
       <div
         className="relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] xl:h-[68vh] overflow-hidden flex flex-col items-center
          justify-center text-center"
@@ -31,7 +31,7 @@ const page = () => {
       <div className=" mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         <Properties />
       </div>
-    </>
+    </section>
   );
 };
 

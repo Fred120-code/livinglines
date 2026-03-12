@@ -5,7 +5,7 @@ import Gallery from "../Component/Gallery/Gallery";
 
 const Page = () => {
   return (
-    <>
+    <div>
       {" "}
       <div
         className="relative md:h-[68vh] h-[280px] overflow-hidden flex items-center
@@ -129,7 +129,7 @@ const Page = () => {
       <DesingProcess />
       {/* Gallery */}
       <Gallery />
-    </>
+    </div>
   );
 };
 

@@ -59,23 +59,42 @@ const Properties = () => {
           {PropertyData.map((property, index) => (
             <SwiperSlide key={index}>
               <Link href={`/properties/${property.id}`}>
-                <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded overflow-hidden group shadow-md">
+                <div
+                  className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] 
+                xl:h-[450px] rounded overflow-hidden group shadow-md"
+                >
                   <Image
                     src={property.image}
                     alt={property.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 
+                    group-hover:scale-110"
                   />
 
                   {/* Overlay Gradient */}
-                  <div className="absolute inset-x-0 bottom-0 h-[25%] sm:h-[30%] bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0" />
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[25%] sm:h-[30%] 
+                  bg-gradient-to-t from-black to-transparent opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-700 z-0"
+                  />
 
                   {/* Title & Price */}
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 w-full absolute bottom-0 left-0 z-10 px-2 sm:px-3 md:px-4 py-2 sm:py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-700">
-                    <h4 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bricolage font-bold line-clamp-2">
+                  <div
+                    className="flex flex-col sm:flex-row justify-between items-start 
+                  sm:items-center gap-2 sm:gap-0 w-full absolute bottom-0 
+                  left-0 z-10 px-2 sm:px-3 md:px-4 py-2 sm:py-3 translate-y-full 
+                  group-hover:translate-y-0 transition-transform duration-700"
+                  >
+                    <h4
+                      className="text-white text-base sm:text-lg md:text-xl 
+                    lg:text-2xl font-bricolage font-bold line-clamp-2"
+                    >
                       {property.title}
                     </h4>
-                    <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-bricolage whitespace-nowrap">
+                    <p
+                      className="text-white text-sm sm:text-base md:text-lg lg:text-xl 
+                    font-bricolage whitespace-nowrap"
+                    >
                       ${property.price}
                     </p>
                   </div>

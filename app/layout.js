@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-import Analytics from "@/components/Analytics";
+import Analytics from "../app/Component/Analytics";
 
 export const metadata = {
   title: "Livinglines",

@@ -2,6 +2,9 @@ import { Bricolage_Grotesque, Geist, Geist_Mono, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Suspense } from "react";
+
+import Analytics from "../app/Component/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +27,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+import Analytics from "@/components/Analytics";
 
 export const metadata = {
   title: "Livinglines",
@@ -67,6 +71,9 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         <Nav />
         {children}
         <Footer />

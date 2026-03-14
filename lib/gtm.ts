@@ -1,4 +1,3 @@
-// lib/gtm.ts
 
 // Typage du dataLayer
 declare global {

@@ -1,4 +1,4 @@
-import { trackEvent } from "@/lib/gtm";
+import { trackEvent } from "../../lib/gtm";
 
 const page = () => {
   const handleSubmit = (e) => {

@@ -1,6 +1,13 @@
-import React from "react";
+import { trackEvent } from "@/lib/gtm";
 
 const page = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    trackEvent("form_submit", {
+      form_name: "contact",
+      page: window.location.pathname,
+    });
+  };
   return (
     <div>
       <div
@@ -64,7 +71,7 @@ const page = () => {
 
             {/* Right Side */}
             <div className="lg:w-2/5">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   placeholder="Name"

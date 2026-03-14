@@ -7,6 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 
+import { trackEvent } from "@/lib/gtm";
+
 //Hero
 import HeroSlides from "../../JsonData/heroSlides";
 
@@ -70,6 +72,9 @@ const Hero = () => {
 
                   <Link href={slide.buttonLink}>
                     <button
+                      onClick={() =>
+                        trackEvent("click-started", { button: "hero" })
+                      }
                       className="mt-4 cursor-pointer rounded px-6 py-3 border border-white 
                         text-white uppercase font-medium tracking-wide hover:bg-white 
                         hover:text-black transition-all"

@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 
-import { trackEvent } from "@/lib/gtm";
+import { trackEvent } from "../../../lib/gtm";
 
 //Hero
 import HeroSlides from "../../JsonData/heroSlides";

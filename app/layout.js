@@ -59,6 +59,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} ${bricolage.variable} `}
       >
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4WMNS4G"
+            height="0" width="0" style="display:none;visibility:hidden">
+          </iframe>
+        </noscript>
         <Nav />
         {children}
         <Footer />

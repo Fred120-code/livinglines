@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import { Suspense } from "react";
 
-import Analytics from "../app/Component/Analytics";
+import Analytics from "../app/Component/Analytics/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

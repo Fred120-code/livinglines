@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="google-tag-manager" strategy="beforeInteractive">
+        <script id="google-tag-manager" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -42,19 +42,19 @@ export default function RootLayout({ children }) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-N4WMNS4G');
           `}
-        </Script>
-        <Script
+        </script>
+        <script
           src="https://www.googletagmanager.com/gtag/js?id=G-LFHBE5WMRY"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-LFHBE5WMRY');
           `}
-        </Script>
+        </script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} ${bricolage.variable} `}

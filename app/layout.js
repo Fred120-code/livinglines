@@ -3,9 +3,7 @@ import { Bricolage_Grotesque, Geist, Geist_Mono, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
-import { Suspense } from "react";
-
-import Analytics from "./Component/Analytics/Analytics";
+import SuspenseComp from "./Component/Suspense/SuspenseComp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,9 +69,7 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
+        <SuspenseComp />
         <Nav />
         {children}
         <Footer />

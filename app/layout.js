@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import { Suspense } from "react";
 
-import Analytics from "../app/Component/Analytics/Analytics";
+import Analytics from "./Component/Analytics/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-import Analytics from "./Component/Analytics/Analytics";
 
 export const metadata = {
   title: "Livinglines",

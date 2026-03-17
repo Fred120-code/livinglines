@@ -1,4 +1,3 @@
-"use client";
 import { Bricolage_Grotesque, Geist, Geist_Mono, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "./Nav";

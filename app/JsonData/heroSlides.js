@@ -8,7 +8,7 @@ const HeroSlides = [
       " Our multidisciplinary team collaborates closely with you to transform ideas into refined architectural and interior experiences.",
     ],
     buttonText: "About Us",
-    buttonLink: "/about",
+    buttonLink: "/About",
   },
   {
     bgImage: "/Hero-2.webp",
@@ -19,7 +19,7 @@ const HeroSlides = [
       " From concept development to execution, we ensure every detail aligns with your objectives and elevates the overall design outcome.",
     ],
     buttonText: "Our Services",
-    buttonLink: "/about",
+    buttonLink: "/About",
   },
   {
     bgImage: "/Hero-3.webp",
@@ -30,7 +30,7 @@ const HeroSlides = [
       " By understanding your lifestyle and aspirations, we design interiors that feel personal, refined, and purpose-driven.",
     ],
     buttonText: "View Portfolio",
-    buttonLink: "/about",
+    buttonLink: "/About",
   },
   {
     bgImage: "/Hero-4.webp",
@@ -41,7 +41,7 @@ const HeroSlides = [
       " Our team integrates contemporary trends with structural integrity to deliver developments that stand the test of time.",
     ],
     buttonText: "Discover More",
-    buttonLink: "/about",
+    buttonLink: "/About",
   },
   {
     bgImage: "/Hero-5.webp",
@@ -52,7 +52,7 @@ const HeroSlides = [
       " Through collaboration, precision, and innovation, we deliver spaces that inspire and add lasting value.",
     ],
     buttonText: "Get Started",
-    buttonLink: "/about",
+    buttonLink: "/About",
   },
 ];
 

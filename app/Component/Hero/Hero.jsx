@@ -69,13 +69,11 @@ const Hero = () => {
                     ))}
                   </div>
 
-                  <Link
-                    href={slide.buttonLink}
-                    onClick={() =>
-                      trackEvent("click-started", { button: "hero" })
-                    }
-                  >
+                  <Link href={slide.buttonLink}>
                     <button
+                      onClick={() =>
+                        trackEvent("click-started", { button: "hero" })
+                      }
                       className="mt-4 cursor-pointer rounded px-6 py-3 border border-white 
                         text-white uppercase font-medium tracking-wide hover:bg-white 
                         hover:text-black transition-all"
